@@ -20,7 +20,36 @@ const example = {
 
 
 // Write your intern objects here:
+// Objects Method
 
+function Person (id, name, email, gender) {
+  this.id = id;
+  this.name = name;
+  this.email = email;
+  this.gender = gender;
+  this.speak = function () {
+    return `Hello, my name is ${this.name}!`;
+  }
+  this.multiplyNums = function (num1, num2) {
+    return num1 * num2;
+  };
+}
+
+let person01 = new Person(1, 'Mitzi', 'mmelloy0@psu.edu', 'F');
+let person02 = new Person(2, 'Kennan', 'kdiben1@tinypic.com', 'M');
+let person03 = new Person(3, 'Keven', 'kmummery2@wikimedia.org', 'M');
+let person04 = new Person(4, 'Gannie', 'gmartinson3@illinois.edu', 'M');
+let person05 = new Person(5, 'Antonietta', 'adaine5@samsung.com', 'F');
+
+console.log(person01.name);
+console.log(person02.id);
+console.log(person03.email);
+console.log(person04.name);
+console.log(person05.gender);
+console.log(person02.speak());
+console.log(person05.multiplyNums(3, 4));
+
+// The Old Way
 const new_interns = [
   {
     "id": 1,
@@ -64,24 +93,42 @@ const new_interns = [
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
+  console.log(person01.name);
+
   console.log(new_interns[0].name);
+
 // Kennan's ID
+  console.log(person02.id);
+
   console.log(new_interns[1].id);
-// Keven's email
+
+  // Keven's email
+  console.log(person03.email);
+
   console.log(new_interns[2].email);
-// Gannie's name
+
+  // Gannie's name
+  console.log(person04.name);
+
   console.log(new_interns[3].name);
-// Antonietta's Gender
+
+  // Antonietta's Gender
+  console.log(person05.gender);
+
   console.log(new_interns[4].gender);
 
   // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
 
+  console.log(person02.speak());
+
   new_interns[1].speak();
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
+
+  console.log(person05.multiplyNums(3, 4));
 
   new_interns[4].multiplyNums(3,4);
 
